@@ -1,18 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <!-- map that links the servlet (ServletExample) to the url 
-    http://localhost:8080/BasicServlets/ServletExample -->
-    <servlet>
-        <servlet-name>ServletExample</servlet-name>
-        <servlet-class>javaServlet.ServletExample</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ServletExample</servlet-name>
-        <url-pattern>/ServletExample</url-pattern>
-    </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
-</web-app>
+<!DOCTYPE html>
+
+<!--Here is the base HTML page for my program-->
+
+<html>
+    <head>
+        <title>Students List</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Student form</h2>
+        <form action="ServletExample" method="POST">  <!--When activated, this 
+        code here call the servlet "ServletExample" using the POST method-->
+            Enter your first name: <input type="text" name="firstN"><br/>
+            Enter your last name: <input type="text" name="lastN"><br/>
+            <button onclick="submit"> Submit Name </button>
+        </form>
+        <form action="ServletExample" method="GET">  <!--When activated, this 
+        code here call the servlet "ServletExample" using the GET method-->
+            <button onclick="submit"> Get Students List </button>
+        </form>
+    </body>
+</html>
